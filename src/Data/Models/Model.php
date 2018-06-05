@@ -1,5 +1,5 @@
 <?php
-namespace Cygnis\Data\Models;
+namespace Kazmi\Data\Models;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 

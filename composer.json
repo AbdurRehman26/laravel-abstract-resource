@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Cygnis\\": "src/"
+            "Kazmi\\": "src/" 
         },
         "files": [
             "src/Support/helpers.php"

@@ -1,10 +1,10 @@
 <?php
 
-namespace Cygnis\Data\Repositories;
+namespace Kazmi\Data\Repositories;
 
 use Illuminate\Support\Facades\Cache;
 
-use Cygnis\Data\Contracts\RepositoryContract;
+use Kazmi\Data\Contracts\RepositoryContract;
 
 use Carbon\Carbon;
 use DB;

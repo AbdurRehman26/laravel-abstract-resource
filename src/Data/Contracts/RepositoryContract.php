@@ -1,5 +1,5 @@
 <?php
-namespace Cygnis\Data\Contracts;
+namespace Kazmi\Data\Contracts;
 
 /**
  * @author Usaama Effendi <usaamaeffendi@gmail.com>

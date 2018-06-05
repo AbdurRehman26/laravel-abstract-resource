@@ -1,0 +1,43 @@
+<?php
+
+namespace DummyNamespace;
+
+use Cygnis\Data\Contracts\RepositoryContract;
+use Cygnis\Data\Repositories\AbstractRepository;
+use DummyRootNamespaceData\Models\DummyClass;
+
+class DummyClassRepository extends AbstractRepository implements RepositoryContract
+{
+    /**
+     *
+     * These will hold the instance of DummyClass Class.
+     *
+     * @var object
+     * @access public
+     *
+     **/
+    public $model;
+
+    /**
+     *
+     * This is the prefix of the cache key to which the
+     * DummyNamespace data will be stored
+     * DummyNamespace Auto incremented Id will be append to it
+     *
+     * Example: DummyClass-1
+     *
+     * @var string
+     * @access protected
+     *
+     **/
+
+    protected $_cacheKey = 'DummyClass';
+    protected $_cacheTotalKey = 'total-DummyClass';
+
+    public function __construct(DummyClass $model)
+    {
+        $this->model = $model;
+        $this->builder = $model;
+
+    }
+}

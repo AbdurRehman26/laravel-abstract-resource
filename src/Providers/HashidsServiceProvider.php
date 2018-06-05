@@ -1,6 +1,6 @@
 <?php
 
-namespace Cygnis\Providers;
+namespace Kazmi\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Hashids\Hashids;

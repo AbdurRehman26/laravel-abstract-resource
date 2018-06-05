@@ -1,11 +1,11 @@
 <?php
 
-namespace Cygnis\Providers;
+namespace Kazmi\Providers;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Hashids\Hashids;
 use Validator;
-use Cygnis\Services\Validation;
+use Kazmi\Services\Validation;
 
 class ServiceProvider extends BaseServiceProvider
 {

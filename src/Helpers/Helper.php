@@ -1,5 +1,5 @@
 <?php
-namespace Cygnis\Helpers;
+namespace Kazmi\Helpers;
 
 /**
  * @author Usaama Effendi <usaamaeffendi@gmail.com>

@@ -1,5 +1,5 @@
 <?php
-namespace Cygnis\Http;
+namespace Kazmi\Http;
 
 use Illuminate\Http\Request as Base;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Cygnis\Providers;
+namespace Kazmi\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Cygnis\Services\Validation;
+use Kazmi\Services\Validation;
 use Validator;
 
 class ValidatorServiceProvider extends ServiceProvider
