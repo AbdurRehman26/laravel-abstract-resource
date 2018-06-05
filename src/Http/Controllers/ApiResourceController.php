@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-
 abstract class ApiResourceController extends Controller
 {
     public $_repository;
@@ -28,12 +27,12 @@ abstract class ApiResourceController extends Controller
 
         $this->validate($request, $rules);
         
-        $per_page = config('app.per_page') ? config('app.per_page') : self::PER_PAGE;
+        $per_page = self::PER_PAGE ? self::PER_PAGE : config('app.per_page');
         $pagination = !empty($input['pagination']) && $input['pagination'] == 'true' ? true : false; 
 
         $data = $this->_repository->findByAll($pagination, $per_page, $input);
 
-        $output = ['response' => ['data' => $data['data'], 'pagination' => !empty($data['pagination'])   , 'message' => 'Success']];
+        $output = ['response' => ['data' => $data['data'], 'pagination' => !empty($data['pagination']) ? $data['pagination'] : false   , 'message' => 'Success']];
 
         // HTTP_OK = 200;
 
