@@ -3,11 +3,11 @@
     "description": "Abstract Repository for Repository Pattern - Laravel",
     "type": "composerr-plugin",
     "license": "MIT License",
+    "version": "dev-master",
     "authors": [
         {
-            "name": "Usaama Effendi",
-            "email": "usama@cygnismedia.com",
-            "homepage": "http://www.cygnismedia.com"
+            "name": "Abdur Rehman Kazmi",
+            "email": "sydabdrehman@gmail.com"
         }
     ],
     "require": {
