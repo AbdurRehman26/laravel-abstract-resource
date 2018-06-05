@@ -1,8 +1,10 @@
 <?php
 
-namespace DummyNamespace;
+namespace DummyNamespace\Controllers;
 
 use DummyRootNamespaceData\Repositories\DummyClassRepository;
+use Kazmi\Http\Controllers\ApiResourceController;
+
 
 class DummyClassController extends ApiResourceController{
     

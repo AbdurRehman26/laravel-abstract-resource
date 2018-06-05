@@ -6,7 +6,7 @@ namespace Kazmi\Commands;
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;
 
-class ApiResourceRepository extends GeneratorCommand
+class ApiRepositoryResourceCommand extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.

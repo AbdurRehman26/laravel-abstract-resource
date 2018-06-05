@@ -2,8 +2,8 @@
 
 namespace DummyNamespace;
 
-use Cygnis\Data\Contracts\RepositoryContract;
-use Cygnis\Data\Repositories\AbstractRepository;
+use Kazmi\Data\Contracts\RepositoryContract;
+use Kazmi\Data\Repositories\AbstractRepository;
 use DummyRootNamespaceData\Models\DummyClass;
 
 class DummyClassRepository extends AbstractRepository implements RepositoryContract
