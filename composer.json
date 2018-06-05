@@ -1,5 +1,5 @@
 {
-    "name": "cygnis-php/abstraction",
+    "name": "kazmi/laravel-abstract-resource",
     "description": "Abstract Repository for Repository Pattern - Laravel",
     "type": "composerr-plugin",
     "license": "MIT License",
