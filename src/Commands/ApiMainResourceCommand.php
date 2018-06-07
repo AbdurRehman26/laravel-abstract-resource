@@ -1,7 +1,8 @@
 <?php
 namespace Kazmi\Commands;
 use Illuminate\Console\GeneratorCommand;
-class ApiMainCommandResource extends GeneratorCommand
+
+class ApiMainResourceCommand extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.

@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 class ResourceCommandServiceProvider extends ServiceProvider
 {
     protected $commands = [
-        'Kazmi\Resource\Commands\ApiMainCommandResource',
+        'Kazmi\Resource\Commands\ApiMainResourceCommand',
         'Kazmi\Resource\Commands\ApiControllerResourceCommand',
         'Kazmi\Resource\Commands\ApiRepositoryResourceCommand',
     ];
