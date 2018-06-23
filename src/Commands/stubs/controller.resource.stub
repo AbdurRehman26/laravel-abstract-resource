@@ -1,9 +1,11 @@
 <?php
 
-namespace DummyNamespace\Controllers;
+namespace DummyNamespace;
 
 use DummyRootNamespaceData\Repositories\DummyClassRepository;
 use Kazmi\Http\Controllers\ApiResourceController;
+use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Http\Request;
 
 
 class DummyClassController extends ApiResourceController{
