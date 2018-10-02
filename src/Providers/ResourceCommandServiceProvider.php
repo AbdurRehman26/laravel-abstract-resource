@@ -1,15 +1,15 @@
 <?php
 
-namespace Kazmi\Commands;
+namespace Kazmi\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
 class ResourceCommandServiceProvider extends ServiceProvider
 {
     protected $commands = [
-        'Kazmi\Resource\Commands\ApiMainResourceCommand',
-        'Kazmi\Resource\Commands\ApiControllerResourceCommand',
-        'Kazmi\Resource\Commands\ApiRepositoryResourceCommand',
+        'Kazmi\Commands\ApiMainResourceCommand',
+        'Kazmi\Commands\ApiControllerResourceCommand',
+        'Kazmi\Commands\ApiRepositoryResourceCommand',
     ];
     /**
      * Bootstrap services.
