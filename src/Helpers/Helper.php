@@ -51,7 +51,7 @@ class Helper {
 
 
 
-    public static customPagination($data, $paginate){
+    public static function customPagination($data, $paginate){
 
         $data['pagination'] = [];
         $data['pagination']['total'] = $paginate->total();

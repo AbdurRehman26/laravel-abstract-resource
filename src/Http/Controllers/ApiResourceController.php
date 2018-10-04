@@ -85,7 +85,7 @@ abstract class ApiResourceController extends Controller
         
         $data = $this->_repository->create($input);
 
-        $output = ['response' => ['data' => $data, 'message' => $this->response_messages(__FUNCTION__)]];
+        $output = ['response' => ['data' => $data, 'message' => $this->responseMessages(__FUNCTION__)]];
         
         // HTTP_OK = 200;
 
@@ -106,7 +106,7 @@ abstract class ApiResourceController extends Controller
         $this->validate($request, $rules, $messages);
 
         $data = $this->_repository->update($input);
-        $output = ['response' => ['data' => $data, 'message' => $this->response_messages(__FUNCTION__)]];
+        $output = ['response' => ['data' => $data, 'message' => $this->responseMessages(__FUNCTION__)]];
 
         // HTTP_OK = 200;
 
@@ -129,7 +129,7 @@ abstract class ApiResourceController extends Controller
 
         $data = $this->_repository->deleteById($input['id']);
 
-        $output = ['response' => ['data' => $data, 'message' => $this->response_messages(__FUNCTION__)]];
+        $output = ['response' => ['data' => $data, 'message' => $this->responseMessages(__FUNCTION__)]];
 
         // HTTP_OK = 200;
 
@@ -158,7 +158,7 @@ abstract class ApiResourceController extends Controller
         return !empty($messages) ? $messages : [];
     }
 
-    public function response_messages($value = '')
+    public function responseMessages($value = '')
     {
         $messages = [
             'store' => 'Record created successfully.',
