@@ -24,6 +24,7 @@ abstract class ApiResourceController extends Controller
     {
         $rules = $this->rules(__FUNCTION__);
         $input = $this->input(__FUNCTION__);
+        $request->request->add(['method_type' => 'index']);
         
         $this->validate($request, $rules);
 
@@ -56,6 +57,7 @@ abstract class ApiResourceController extends Controller
     public function show(Request $request,$id)
     {
         $request->request->add(['id' => $id]);
+        $request->request->add(['method_type' => 'show']);
 
         $rules = $this->rules(__FUNCTION__);
         $input = $this->input(__FUNCTION__);
@@ -76,6 +78,8 @@ abstract class ApiResourceController extends Controller
     //Create single record
     public function store(Request $request)
     {   
+        $request->request->add(['method_type' => 'store']);
+
         $rules = $this->rules(__FUNCTION__);
         $input = $this->input(__FUNCTION__);
         
@@ -118,6 +122,8 @@ abstract class ApiResourceController extends Controller
     //Delete single record
     public function destroy(Request $request, $id)
     {
+        $request->request->add(['method_type' => 'destroy']);
+
         $request->request->add(['id' => $id]);
 
         $rules = $this->rules(__FUNCTION__);
@@ -149,16 +155,7 @@ abstract class ApiResourceController extends Controller
         return [];
     }
 
-    public function messages($value = '')
-    {
-        $messages = [
-
-        ];
-        
-        return !empty($messages) ? $messages : [];
-    }
-
-    public function responseMessages($value = '')
+    public function responseMessages ($value = '')
     {
         $messages = [
             'store' => 'Record created successfully.',
@@ -167,6 +164,14 @@ abstract class ApiResourceController extends Controller
         ];
         
         return !empty($messages[$value]) ? $messages[$value] : 'Success.';
+    }
+
+    public function messages ($value = '')
+    {
+        $messages = [
+        ];
+        
+        return !empty($messages[$value]) ? $messages[$value] : [];
     }
 
 }
