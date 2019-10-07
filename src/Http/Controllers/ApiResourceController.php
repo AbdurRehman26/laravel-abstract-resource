@@ -40,11 +40,9 @@ abstract class ApiResourceController extends Controller
         $data = $this->_repository->findByAll($pagination, $per_page, $input);
 
         $output = [
-            'response' => [
                 'data' => $data['data'],
                 'pagination' => !empty($data['pagination']) ? $data['pagination'] : false,
                 'message' => $this->responseMessages(__FUNCTION__),
-            ]
         ];
 
         // HTTP_OK = 200;
@@ -66,7 +64,9 @@ abstract class ApiResourceController extends Controller
 
         $data = $this->_repository->findById($input['id'], $refresh = false, $input, $encode = true);
 
-        $output = ['response' => ['data' => $data]];
+        $output = [
+            'data' => $data
+        ];
 
         // HTTP_OK = 200;
 
@@ -89,7 +89,10 @@ abstract class ApiResourceController extends Controller
         
         $data = $this->_repository->create($input);
 
-        $output = ['response' => ['data' => $data, 'message' => $this->responseMessages(__FUNCTION__)]];
+        $output = [
+            'data' => $data,
+            'message' => $this->responseMessages(__FUNCTION__)
+        ];
         
         // HTTP_OK = 200;
 
@@ -110,7 +113,10 @@ abstract class ApiResourceController extends Controller
         $this->validate($request, $rules, $messages);
 
         $data = $this->_repository->update($input);
-        $output = ['response' => ['data' => $data, 'message' => $this->responseMessages(__FUNCTION__)]];
+        $output = [
+            'data' => $data,
+            'message' => $this->responseMessages(__FUNCTION__)
+        ];
 
         // HTTP_OK = 200;
 
@@ -135,7 +141,10 @@ abstract class ApiResourceController extends Controller
 
         $data = $this->_repository->deleteById($input['id']);
 
-        $output = ['response' => ['data' => $data, 'message' => $this->responseMessages(__FUNCTION__)]];
+        $output = [
+            'data' => $data,
+            'message' => $this->responseMessages(__FUNCTION__)
+        ];
 
         // HTTP_OK = 200;
 
