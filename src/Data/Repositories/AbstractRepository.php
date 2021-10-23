@@ -143,7 +143,7 @@ abstract class AbstractRepository implements RepositoryContract {
         $data = ['data'=>[]];
         if ($models) {
             foreach ($models as &$model) {
-                $model = $this->findById($model->id);
+                $model = $this->findById($model->id, false, $input);
                 if ($model) {
                     $data['data'][] = $model;
                 }
@@ -258,5 +258,5 @@ abstract class AbstractRepository implements RepositoryContract {
         }
         return $data;
     }
-    
+
 }
